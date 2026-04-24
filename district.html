@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select District | FarmSync</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="logo.png" alt="FarmSync Logo">
+    <h1>FarmSync - Select District</h1>
+  </div>
+  <a href="login.html" class="login-btn">Logout</a>
+</nav>
+
+<div class="dashboard" id="districtContainer"></div>
+
+<script src="app.js"></script>
+<script>
+const container = document.getElementById("districtContainer");
+
+Object.keys(farmData).forEach(district => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
+    <h3>${district}</h3>
+    <p>Total Sheds: ${farmData[district].length}</p>
+    <button onclick="selectDistrict('${district}')">View Sheds</button>
+  `;
+  container.appendChild(card);
+});
+
+function selectDistrict(district) {
+  localStorage.setItem("selectedDistrict", district);
+  window.location.href = "shed.html";
+}
+</script>
+
+</body>
+</html>

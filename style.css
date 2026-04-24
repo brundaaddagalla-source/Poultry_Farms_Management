@@ -1,0 +1,335 @@
+/* ================= GLOBAL RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #1b4332;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  color: #fff;
+  z-index: 1000;
+}
+
+/* Left side: logo + title */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-left img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.nav-left h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Login Button */
+.login-btn {
+  text-decoration: none;
+  background: #2d6a4f;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #40916c;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("images/BG.jpeg") center / cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-content h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: #40916c;
+  padding: 12px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #2d6a4f;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #1b4332;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery {
+  padding: 80px 60px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 20px;
+  color: #1b4332;
+}
+
+.gallery-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.gallery-grid img.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard {
+  margin-top: 80px;
+  padding: 40px 60px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* Force 4 columns */
+  gap: 25px;
+}
+
+/* ===== Dashboard Background Logo ===== */
+
+.dashboard-page::before {
+  content: "";
+  position:fixed;
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:500px;
+  height: 500px;
+
+  background: url("logo.png") center center no-repeat;
+  background-size: contain;
+
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure content stays above watermark */
+.dashboard-page .navbar,
+.dashboard-page .dashboard,
+.dashboard-page .card {
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #1b4332;
+}
+
+.card p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.card button {
+  padding: 10px 18px;
+  background: #40916c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.card button:hover {
+  background: #2d6a4f;
+}
+
+/* ================= LOGIN PAGE ================= */
+
+.login-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("images/BG.jpeg") center / cover no-repeat;
+}
+
+.login-container {
+  background: #ffffff;
+  padding: 40px;
+  width: 360px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #1b4332;
+}
+
+.login-container select,
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #40916c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background: #2d6a4f;
+}
+
+#error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background: #1b4332;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px;
+}
+
+/* THERMOMETER */
+
+.thermometer{
+    width:50px;
+    height:220px;
+    background:#e6e6e6;
+    border-radius:25px;
+    margin:15px auto;
+    position:relative;
+    overflow:hidden;
+}
+
+.thermometer-fill{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:5%;   /* minimum visible level */
+
+    /* CORRECT GRADIENT */
+    background: linear-gradient(
+        to bottom,
+        red,
+        orange,
+        yellow,
+        green
+    );
+
+    transition:height 0.4s ease;
+}

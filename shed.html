@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Shed | FarmSync</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+
+<nav class="navbar">
+  <h1>FarmSync - Sheds</h1>
+  <a href="district.html" class="login-btn">Back</a>
+</nav>
+
+<div class="dashboard" id="shedContainer"></div>
+
+<script src="app.js"></script>
+<script src="app.js"></script>
+<script>
+
+const district = localStorage.getItem("selectedDistrict");
+const sheds = farmData[district];
+
+const container = document.getElementById("shedContainer");
+
+const farmDB = getFarmDB();
+
+sheds.forEach(shed => {
+
+  let birdCount = 60000;
+
+  if(
+      farmDB[district] &&
+      farmDB[district][shed] &&
+      farmDB[district][shed].birds
+  ){
+      birdCount = farmDB[district][shed].birds;
+  }
+
+  const card = document.createElement("div");
+
+  card.className = "card";
+
+  card.innerHTML = `
+    <h3>${shed}</h3>
+    <p>Total Hens: ${birdCount}</p>
+    <button onclick="selectShed('${shed}')">Manage</button>
+  `;
+
+  container.appendChild(card);
+
+});
+
+function selectShed(shed){
+
+  localStorage.setItem("selectedShed", shed);
+
+  window.location.href = "shed-dashboard.html";
+
+}
+
+</script>
+
+</body>
+</html>

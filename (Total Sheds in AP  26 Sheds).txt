@@ -1,0 +1,17 @@
+(Total Sheds in AP : 26 Sheds)-->
+District-Wise
+Guntur - 3 sheds --> Gk Farms ( Tenali, Narasaraopet, Sattenapalli)
+Krishna - 4 sheds --> GK Farms ( Mangalagiri(2 sheds), Madhavaram, Chiruvolu lanka,)
+Godavari - 5 sheds --> GK Farms ( Eluru, Bhimavaram(2 sheds), Narasapuram, Akividu)
+Vizag - 4 sheds --> GK Farms ( Bheemili(2), Madhurawada(2))
+Chittoor - 6 sheds --> (Papagni(2), Arani, Bahuda, Kalyani Rivers(2))
+Kurnool - 4 sheds --> GK Farms ( Krishnagiri, Pattikonda, Mantralayam(2))
+
+In Detailed :
+Per shed capacity - 60k hens (Broilers)
+Guntur 	   - 3 sheds => 3 x 60,000 = 1,80,000 hens
+Krishna    - 4 sheds => 4 x 60,000 = 2,40,000 hens
+Godavari   - 5 sheds => 5 x 60,000 = 3,00,000 hens
+Vizag      - 4 sheds => 4 x 60,000 = 2,40,000 hens
+Chittoor   - 6 sheds => 6 x 60,000 = 3,60,000 hensd
+Kurnool    - 3 sheds => 3 x 60,000 = 1,80,000 hens

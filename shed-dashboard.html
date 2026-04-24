@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shed Dashboard | FarmSync</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="logo.png" alt="FarmSync Logo">
+    <h1 id="shedTitle"></h1>
+  </div>
+  <a href="shed.html" class="login-btn">Back</a>
+</nav>
+
+<div class="dashboard">
+
+<!-- TOTAL HENS -->
+<div class="card">
+
+<h3>Total Hens</h3>
+
+<p id="birdCount"></p>
+
+<input type="range" id="addBirds" min="1" max="5000" step="100">
+<p id="addBirdsValue"></p>
+
+<button onclick="addBirds()">Add Hens</button>
+
+<input type="number" id="sellBirds" placeholder="Sell Hens">
+<input type="number" id="pricePerHen" placeholder="Price per Hen">
+
+<button onclick="sellBirds()">Sell</button>
+
+</div>
+
+
+<!-- TEMPERATURE -->
+<div class="card">
+
+<h3>Temperature Control</h3>
+
+<p id="tempValue"></p>
+
+<div class="thermometer">
+
+<div id="tempFill" class="thermometer-fill"></div>
+
+</div>
+
+<input type="range" id="tempInput" min="20" max="40" step="1">
+
+<p id="tempSliderValue"></p>
+
+<button onclick="updateTemp()">Update</button>
+
+<p id="tempStatus"></p>
+
+</div>
+
+
+<!-- FEED -->
+<div class="card">
+
+<h3>Feed Stock (Tons)</h3>
+
+<p id="feedStock"></p>
+
+<input type="range" id="addFeed" min="1" max="50" step="1">
+<p id="addFeedValue"></p>
+
+<button onclick="addFeed()">Add Feed</button>
+
+<input type="range" id="feedHensAmount" min="1" max="10" step="0.5">
+<p id="feedConsumeValue"></p>
+
+<button onclick="feedHens()">Feed Hens</button>
+
+<p id="feedAlert"></p>
+
+</div>
+
+
+<!-- PROFIT -->
+<div class="card">
+
+<h3>Profit / Loss</h3>
+
+<p id="profitDisplay"></p>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+<script src="shed-dashboard.js"></script>
+
+</body>
+</html>
